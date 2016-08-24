@@ -16,3 +16,4 @@ file { '/var/www/craft/storage':
     owner   => 'clockworkdeploy',
     group   => 'www-data',
     recurse => true
+  }
