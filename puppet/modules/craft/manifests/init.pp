@@ -1,18 +1,18 @@
   file { '/var/www':
     ensure  => directory,
-    owner   => 'ubuntu',
+    owner   => 'clockworkdeploy',
     recurse => true
   }
 
   file { '/var/www/craft/config':
     ensure  => directory,
-    owner   => 'www-data',
+    owner   => 'clockworkdeploy',
     group   => 'www-data',
     recurse => true
   }
 
 file { '/var/www/craft/storage':
     ensure  => directory,
-    owner   => 'www-data',
+    owner   => 'clockworkdeploy',
     group   => 'www-data',
     recurse => true

@@ -1,4 +1,4 @@
-class git::clone ($repo, $username='ubuntu') {
+class git::clone ($repo, $username='clockworkdeploy') {
     $group = $username
     group { $username:
         ensure  => present,
@@ -39,7 +39,7 @@ class git::clone ($repo, $username='ubuntu') {
         group    => $owner,
         provider => git,
         require  => [ Package["git"] ],
-        source   => "https://github.com/pixelandtonic/Craft-Release.git",
+        source   => "https://github.com/nelemansc/Craft-Release.git",
         revision => 'master',
     }
 }
