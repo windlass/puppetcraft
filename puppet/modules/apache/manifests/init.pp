@@ -7,6 +7,7 @@ package { 'apache2':
 
 # ensure apache2 service is running
 service { 'apache2':
-  ensure => running,
+  ensure   => running,
+  require  => Package['apache2'];
    }
 }
