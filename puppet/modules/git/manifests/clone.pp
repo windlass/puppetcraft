@@ -34,12 +34,12 @@ class git::clone ($repo, $username='clockworkdeploy') {
     }
     
     vcsrepo { "/opt/code/Craft-Release":
-        ensure   => latest,
+        ensure   => present,
         owner    => $owner,
         group    => $owner,
         provider => git,
         require  => [ Package["git"] ],
-        source   => "https://github.com/nelemansc/Craft-Release.git",
+        source   => "git://github.com/nelemansc/Craft-Release.git",
         revision => 'master',
     }
 }
